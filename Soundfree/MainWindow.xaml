@@ -7,12 +7,36 @@
         mc:Ignorable="d"
         Title="Soundfree" Height="450" Width="800">
     <Grid>
-        <Button
-    Content="Clique em mim"
-    Width="150"
-    Height="40"
-    Click="Button_Click"
-            />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <TextBlock
+                Text="Arquivos de áudio"
+                FontSize="18"
+                FontWeight="Bold"/>
+        
+        <ListBox 
+            Name="ListaAudios" 
+            Grid.Row="1" 
+            Margin="0,10,0,10" />
+
+        <Button Content="Play"
+        Width="100"
+        Height="30"
+        Click="BtnPlay_Click"/>
+
+        <Button
+               Name="BtnAdicionar"
+               Grid.Row="2"
+               Content="Adicionar Áudio"
+               Width="160"
+               Height="35"
+               Click="BtnAdicionar_Click"            
+            />
+        
+        
     </Grid>
 </Window>
